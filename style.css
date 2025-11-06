@@ -1,0 +1,153 @@
+/* Importando fonte futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0a0a0a 0%, #111 100%);
+    color: #e6e6e6;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho com efeito neon */
+header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(255, 153, 0, 0.8), rgba(0, 255, 204, 0.3));
+    background-image: url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade');
+    background-size: cover;
+    background-blend-mode: overlay;
+    box-shadow: 0 0 30px rgba(255, 136, 0, 0.3);
+}
+
+header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 20px #ffa726, 0 0 40px #ff6f00;
+    animation: neon-glow 2.5s ease-in-out infinite alternate;
+}
+
+header p {
+    font-size: 1.3em;
+    text-shadow: 0 0 10px #ffb74d;
+}
+
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 5px #ff9800, 0 0 20px #ffb300, 0 0 30px #ffcc80;
+    }
+    to {
+        text-shadow: 0 0 10px #ffcc80, 0 0 30px #ffee58, 0 0 50px #ffb300;
+    }
+}
+
+/* Seções gerais */
+section {
+    padding: 60px 12%;
+}
+
+h2 {
+    color: #ffb300;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #ff9800, 0 0 30px #ffc107;
+    border-bottom: 2px solid #ffb300;
+    display: inline-block;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.8em;
+    font-size: 1.1em;
+    color: #f0f0f0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+/* Imagens */
+.imagem {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 25px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.imagem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Cards (metas e utilidades) */
+.metas, .utilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid #ffb30050;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 179, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Frase final com brilho */
+.frase-final {
+    background: linear-gradient(90deg, #ff9800, #ffcc00, #00ffc8);
+    background-size: 300% 300%;
+    animation: gradient-shift 6s infinite alternate;
+    color: #111;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.6em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px #fff;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+#sobre video {
+    width: 50%;
+    border-radius: 15px;
+    margin-top: 25px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    margin-left: 17vw;
+    transition: 0.4s ease;
+}
+
+#sobre video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 251, 0, 0.3);
+}
